@@ -4,13 +4,29 @@
 \alias{PeakList}
 \title{Class PeakList}
 \usage{
-PeakList(analysisName = NULL, instrument = NULL, nz = NULL,
-  calibration = NULL, calibPoints = NULL, mz = NULL, peakIDs = NULL,
-  peakMzs = NULL, ...)
+PeakList(
+  analysisName = NULL,
+  instrument = NULL,
+  nz = NULL,
+  calibration = NULL,
+  calibPoints = NULL,
+  mz = NULL,
+  peakIDs = NULL,
+  peakMzs = NULL,
+  ...
+)
 
-PeakList(analysisName = NULL, instrument = NULL, nz = NULL,
-  calibration = NULL, calibPoints = NULL, mz = NULL, peakIDs = NULL,
-  peakMzs = NULL, ...)
+PeakList(
+  analysisName = NULL,
+  instrument = NULL,
+  nz = NULL,
+  calibration = NULL,
+  calibPoints = NULL,
+  mz = NULL,
+  peakIDs = NULL,
+  peakMzs = NULL,
+  ...
+)
 }
 \arguments{
 \item{analysisName}{character vector with the import filename}
@@ -56,6 +72,7 @@ PeakList object. Input are currently all needed variables.
 \item{\code{peakMzs}}{matrix with mass to charge values for lower, middle and upper 
 peak values}
 }}
+
 \examples{
 # The typical way to obtain a PeakList object is by
 # applying some peak picking method to a MassSpectra
@@ -74,4 +91,3 @@ Lorenz Gerber <lorenz.gerber@slu.se>
 
 Lorenz Gerber <lorenz.gerber@slu.se>
 }
-

@@ -626,7 +626,7 @@ setMethod(smootherSpline, signature(object = "MassSpectra"),
 ##' 
 ##' Method peakPick for MassSpectra class, works as a constructor for PeakList class.
 ##' The local min/max detection implementation is adapted from the CRAN package
-##' 'ChemometricsWithR'. 
+##' 'alsace'. 
 ##' @param object object of class MassSpectra
 ##' @param span numeric parameter for local max/min detection
 ##' @param ... additional args

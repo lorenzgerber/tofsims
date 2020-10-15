@@ -4,8 +4,12 @@
 \alias{cReadRawPhi}
 \title{Ulvac phi ToF-SIMS raw data import}
 \usage{
-cReadRawPhi(analysisName, mode = c("spectra", "imagepeaks", "image"),
-  PeakListobj = c(), ...)
+cReadRawPhi(
+  analysisName,
+  mode = c("spectra", "imagepeaks", "image"),
+  PeakListobj = c(),
+  ...
+)
 }
 \arguments{
 \item{analysisName}{character}
@@ -34,4 +38,3 @@ is unit mass binned with bins of size one from -0.5 to + 0.5.
 \author{
 Lorenz Gerber, Viet Mai Hoang
 }
-

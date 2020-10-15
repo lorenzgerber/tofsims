@@ -4,8 +4,11 @@
 \alias{readBIF}
 \title{ToF-SIMS BIF/BIF6 file import}
 \usage{
-readBIF(analysisName, instrument = c("iontof", "ulvacphi"),
-  mode = c("spectra", "image"))
+readBIF(
+  analysisName,
+  instrument = c("iontof", "ulvacphi"),
+  mode = c("spectra", "image")
+)
 }
 \arguments{
 \item{analysisName}{: filename of BIF/BIF6 file to read}
@@ -29,4 +32,3 @@ than the \code{readBIFParallel} function.
 \author{
 Lorenz Gerber
 }
-

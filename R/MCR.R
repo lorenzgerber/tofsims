@@ -2,8 +2,8 @@
 ##' 
 ##' opaMCR is a MCR-ALS function using the Orthogonal Projection Approach from 
 ##' 
-##' opaMCR uses the function \code{ChemometricsWithR::opa()} (Orthogonal Projection Approach,
-##' CRAN package 'ChemometricsWithR') for start estimates of pure spectras and
+##' opaMCR uses the function \code{alsace::opa()} (Orthogonal Projection Approach,
+##' Bioconductor package 'alsace') for start estimates of pure spectras and
 ##' \code{ALS::als()} (CRAN package 'ALS') as MCR-ALS implementation. This method is doing
 ##' fine with images up to 256x256 pixels. For larger images, memory usage 
 ##' becomes unreasonably high. 
@@ -13,7 +13,7 @@
 ##' @param maxiter numeric how many iterations
 ##' @return object of class MCR
 ##' @rdname MCR
-##' @import ChemometricsWithR
+##' @import alsace
 ##' @import ALS
 ##' @examples
 ##' testImage<-MassImage('dummy')
@@ -34,11 +34,11 @@ opaMCR <- function(dataObject, opaComps, maxiter = 10) {
     ### are not loaded
     requireNamespace('ALS')
     message("Calculating ", opaComps, " initial guess by OPA. ")
-    opaOut <- ChemometricsWithR::opa(nz(dataObject), opaComps)
+    opaOut <- alsace::opa(nz(dataObject), opaComps)
     message("Calculating MCR-ALS ")
     opamcrals <- ALS::als(CList = list(matrix(0, xdim(dataObject) * 
         ydim(dataObject), opaComps)), PsiList = list(nz(dataObject)), 
-        S = opaOut$pure.comp, nonnegS = TRUE, nonnegC = TRUE, 
+        S = opaOut, nonnegS = TRUE, nonnegC = TRUE, 
         uniC = FALSE, maxiter = maxiter, forcemaxiter = TRUE, 
         optS1st = FALSE, baseline = TRUE)
     

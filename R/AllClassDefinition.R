@@ -107,7 +107,6 @@ validMassImageObject <- function(object) {
 ##' @rdname MassImage
 ##' @export
 ##' @slot xy vector giving the pixel dimension of the image
-##' @inheritParams MassSpectra
 MassImage <- setClass("MassImage", 
                       slots = c(xy = "vector"), 
                       contains = c("MassSpectra"), 
@@ -142,7 +141,6 @@ validPeakListObject <- function(object) {
 ##' @slot peakIDs matrix integer ID for peaks
 ##' @slot peakMzs matrix with mass to charge values for lower, middle and upper 
 ##' peak values
-##' @inheritParams MassSpectra
 ##' @author Lorenz Gerber <lorenz.gerber@@slu.se>
 ##' @examples 
 ##' # The typical way to obtain a PeakList object is by

@@ -47,4 +47,3 @@ data(tofsimsData)
 testImage<-nnMNF(testImage)
 image(analysis(testImage,1), comp = 1)}
 }
-

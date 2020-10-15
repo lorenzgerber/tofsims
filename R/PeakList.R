@@ -175,7 +175,7 @@ setMethod(peaks2Spectra, signature(objectPeaks="PeakList", objectSpectra="MassSp
 ##' This method uses signal processing to determine lower and upper peak width
 ##' limits based on local max/min detection of the first derivate next to
 ##' peak center values. The initial code for local min/max detection is adapted
-##' from the CRAN package 'ChemometricsWithR'.
+##' from the CRAN package 'alsace'.
 ##' @rdname findPeakWidth
 ##' @import signal
 ##' @examples

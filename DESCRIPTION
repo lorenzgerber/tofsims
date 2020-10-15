@@ -2,7 +2,7 @@ Package: tofsims
 Type: Package
 Title: Import, process and analysis of Time-of-Flight Secondary Ion Mass Spectrometry
           (ToF-SIMS) imaging data
-Version: 1.17.0
+Version: 1.9.1
 Author: Lorenz Gerber, Viet Mai Hoang
 Maintainer: Lorenz Gerber <genfys@gmail.com>
 Depends: R (>= 3.3.0), methods, utils, ProtGenerics
@@ -14,7 +14,7 @@ Description: This packages offers a pipeline for import, processing and analysis
           implemented (PCA, MCR, MAF, MNF). An interface to the bioconductor image processing
           package EBImage offers image segmentation functionality.
 License: GPL-3
-Imports: Rcpp (>= 0.11.2), ALS, ChemometricsWithR, signal, KernSmooth, graphics, grDevices,
+Imports: Rcpp (>= 0.11.2), ALS, alsace, signal, KernSmooth, graphics, grDevices,
           stats
 Suggests: EBImage, knitr, rmarkdown, testthat, tofsimsData, BiocParallel, RColorBrewer
 Enhances: parallel
@@ -22,7 +22,8 @@ LinkingTo: Rcpp, RcppArmadillo
 VignetteBuilder: knitr
 biocViews: ImmunoOncology, Infrastructure, DataImport, MassSpectrometry, ImagingMassSpectrometry, Proteomics,
           Metabolomics
-RoxygenNote: 5.0.1
+RoxygenNote: 7.1.1
+Encoding: UTF-8
 NeedsCompilation: yes
 URL: https://github.com/lorenzgerber/tofsims
 BugReports: https://github.com/lorenzgerber/tofsims/issues

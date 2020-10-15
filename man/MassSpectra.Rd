@@ -63,6 +63,7 @@ charge ratios}
 \item{\code{mz}}{vector same length as columns in \code{nz} for mass to charge 
 values}
 }}
+
 \examples{
 \dontrun{
 ## access rawdata in tofsims package
@@ -76,4 +77,3 @@ MassSpectra('dummy')
 \author{
 Lorenz Gerber <lorenz.gerber@slu.se>
 }
-

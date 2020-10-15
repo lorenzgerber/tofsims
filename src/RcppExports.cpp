@@ -6,9 +6,23 @@
 
 using namespace Rcpp;
 
+// EigenDecompose
+List EigenDecompose(NumericMatrix A, NumericMatrix B, int startIndex, int endIndex);
+RcppExport SEXP _tofsims_EigenDecompose(SEXP ASEXP, SEXP BSEXP, SEXP startIndexSEXP, SEXP endIndexSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type A(ASEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type B(BSEXP);
+    Rcpp::traits::input_parameter< int >::type startIndex(startIndexSEXP);
+    Rcpp::traits::input_parameter< int >::type endIndex(endIndexSEXP);
+    rcpp_result_gen = Rcpp::wrap(EigenDecompose(A, B, startIndex, endIndex));
+    return rcpp_result_gen;
+END_RCPP
+}
 // import
 List import(CharacterVector rFilename, CharacterVector fType, int imageSize, float upperMass);
-RcppExport SEXP tofsims_import(SEXP rFilenameSEXP, SEXP fTypeSEXP, SEXP imageSizeSEXP, SEXP upperMassSEXP) {
+RcppExport SEXP _tofsims_import(SEXP rFilenameSEXP, SEXP fTypeSEXP, SEXP imageSizeSEXP, SEXP upperMassSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -22,7 +36,7 @@ END_RCPP
 }
 // calibrate_ITZIP
 List calibrate_ITZIP(List uncalibrate, float upperMass);
-RcppExport SEXP tofsims_calibrate_ITZIP(SEXP uncalibrateSEXP, SEXP upperMassSEXP) {
+RcppExport SEXP _tofsims_calibrate_ITZIP(SEXP uncalibrateSEXP, SEXP upperMassSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -34,7 +48,7 @@ END_RCPP
 }
 // read_BIF
 List read_BIF(std::string file, std::string instrument);
-RcppExport SEXP tofsims_read_BIF(SEXP fileSEXP, SEXP instrumentSEXP) {
+RcppExport SEXP _tofsims_read_BIF(SEXP fileSEXP, SEXP instrumentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -44,23 +58,9 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// EigenDecompose
-List EigenDecompose(NumericMatrix A, NumericMatrix B, int startIndex, int endIndex);
-RcppExport SEXP tofsims_EigenDecompose(SEXP ASEXP, SEXP BSEXP, SEXP startIndexSEXP, SEXP endIndexSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type A(ASEXP);
-    Rcpp::traits::input_parameter< NumericMatrix >::type B(BSEXP);
-    Rcpp::traits::input_parameter< int >::type startIndex(startIndexSEXP);
-    Rcpp::traits::input_parameter< int >::type endIndex(endIndexSEXP);
-    rcpp_result_gen = Rcpp::wrap(EigenDecompose(A, B, startIndex, endIndex));
-    return rcpp_result_gen;
-END_RCPP
-}
 // nnMean
 NumericVector nnMean(NumericVector y, int nrows, int ncols);
-RcppExport SEXP tofsims_nnMean(SEXP ySEXP, SEXP nrowsSEXP, SEXP ncolsSEXP) {
+RcppExport SEXP _tofsims_nnMean(SEXP ySEXP, SEXP nrowsSEXP, SEXP ncolsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -73,7 +73,7 @@ END_RCPP
 }
 // readRawPhiC
 NumericMatrix readRawPhiC(CharacterVector rFilename, float rSlope, float rIntercept, float rImagePixels);
-RcppExport SEXP tofsims_readRawPhiC(SEXP rFilenameSEXP, SEXP rSlopeSEXP, SEXP rInterceptSEXP, SEXP rImagePixelsSEXP) {
+RcppExport SEXP _tofsims_readRawPhiC(SEXP rFilenameSEXP, SEXP rSlopeSEXP, SEXP rInterceptSEXP, SEXP rImagePixelsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -87,7 +87,7 @@ END_RCPP
 }
 // cTable
 List cTable(NumericVector vect);
-RcppExport SEXP tofsims_cTable(SEXP vectSEXP) {
+RcppExport SEXP _tofsims_cTable(SEXP vectSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -98,7 +98,7 @@ END_RCPP
 }
 // cParIndicesSearch
 IntegerVector cParIndicesSearch(NumericVector rawVector, NumericVector mzs, IntegerVector mzsOrder, std::string startOrEnd);
-RcppExport SEXP tofsims_cParIndicesSearch(SEXP rawVectorSEXP, SEXP mzsSEXP, SEXP mzsOrderSEXP, SEXP startOrEndSEXP) {
+RcppExport SEXP _tofsims_cParIndicesSearch(SEXP rawVectorSEXP, SEXP mzsSEXP, SEXP mzsOrderSEXP, SEXP startOrEndSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -109,4 +109,21 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(cParIndicesSearch(rawVector, mzs, mzsOrder, startOrEnd));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_tofsims_EigenDecompose", (DL_FUNC) &_tofsims_EigenDecompose, 4},
+    {"_tofsims_import", (DL_FUNC) &_tofsims_import, 4},
+    {"_tofsims_calibrate_ITZIP", (DL_FUNC) &_tofsims_calibrate_ITZIP, 2},
+    {"_tofsims_read_BIF", (DL_FUNC) &_tofsims_read_BIF, 2},
+    {"_tofsims_nnMean", (DL_FUNC) &_tofsims_nnMean, 3},
+    {"_tofsims_readRawPhiC", (DL_FUNC) &_tofsims_readRawPhiC, 4},
+    {"_tofsims_cTable", (DL_FUNC) &_tofsims_cTable, 1},
+    {"_tofsims_cParIndicesSearch", (DL_FUNC) &_tofsims_cParIndicesSearch, 4},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_tofsims(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

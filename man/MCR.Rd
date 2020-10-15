@@ -2,8 +2,8 @@
 % Please edit documentation in R/AllClassDefinition.R, R/MCR.R
 \docType{class}
 \name{MCR-class}
-\alias{MCR}
 \alias{MCR-class}
+\alias{MCR}
 \alias{opaMCR}
 \title{Class MCR}
 \usage{
@@ -29,8 +29,8 @@ opaMCR is a MCR-ALS function using the Orthogonal Projection Approach from
 Class \code{MCR} contains methods for 'Multivariate Curve
 Resolution by Alternate Least Squares'
 
-opaMCR uses the function \code{ChemometricsWithR::opa()} (Orthogonal Projection Approach,
-CRAN package 'ChemometricsWithR') for start estimates of pure spectras and
+opaMCR uses the function \code{alsace::opa()} (Orthogonal Projection Approach,
+Bioconductor package 'alsace') for start estimates of pure spectras and
 \code{ALS::als()} (CRAN package 'ALS') as MCR-ALS implementation. This method is doing
 fine with images up to 256x256 pixels. For larger images, memory usage 
 becomes unreasonably high.
@@ -44,6 +44,7 @@ becomes unreasonably high.
 
 \item{\code{iters}}{numeric number of iterations}
 }}
+
 \examples{
 testImage<-MassImage('dummy')
 testImage<-opaMCR(testImage, 2, 2)
@@ -58,4 +59,3 @@ image(analysis(testImage,1), comp = 1)
 \author{
 Lorenz Gerber <lorenz.gerber@slu.se>
 }
-

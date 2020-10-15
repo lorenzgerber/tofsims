@@ -38,4 +38,3 @@ data(tofsimsData)
 MAF(testImage,5,TRUE)
 image(analysis(testImage,1),comp = 1)}
 }
-

@@ -4,13 +4,21 @@
 \alias{MassImage}
 \title{Class MassImage}
 \usage{
-MassImage(select = c("ulvacbif", "iontofbif", "iontofgrdpeaks",
-  "ulvacrawpeaks", "dummy"), analysisName, PeakListobj = c(),
-  untilScan = NULL, ...)
+MassImage(
+  select = c("ulvacbif", "iontofbif", "iontofgrdpeaks", "ulvacrawpeaks", "dummy"),
+  analysisName,
+  PeakListobj = c(),
+  untilScan = NULL,
+  ...
+)
 
-MassImage(select = c("ulvacbif", "iontofbif", "iontofgrdpeaks",
-  "ulvacrawpeaks", "dummy"), analysisName, PeakListobj = c(),
-  untilScan = NULL, ...)
+MassImage(
+  select = c("ulvacbif", "iontofbif", "iontofgrdpeaks", "ulvacrawpeaks", "dummy"),
+  analysisName,
+  PeakListobj = c(),
+  untilScan = NULL,
+  ...
+)
 }
 \arguments{
 \item{select}{\code{character}, 'ulvacbif', 'iontofbif',
@@ -51,6 +59,7 @@ be provided as argument.
 \describe{
 \item{\code{xy}}{vector giving the pixel dimension of the image}
 }}
+
 \examples{
 # creating dummy data
 testImage<-MassImage('dummy')
@@ -75,4 +84,3 @@ image(rawImportedImage)
 \author{
 Lorenz Gerber <lorenz.gerber@slu.se>
 }
-

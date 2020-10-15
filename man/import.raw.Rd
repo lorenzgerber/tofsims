@@ -4,8 +4,13 @@
 \alias{import.raw}
 \title{Raw data import}
 \usage{
-import.raw(analysisName, mode = c("spectra", "imagepeaks"),
-  PeakListobj = c(), untilScan = NULL, ...)
+import.raw(
+  analysisName,
+  mode = c("spectra", "imagepeaks"),
+  PeakListobj = c(),
+  untilScan = NULL,
+  ...
+)
 }
 \arguments{
 \item{analysisName}{character}
@@ -30,4 +35,3 @@ This import function works on GRD and ITZIP format
 \author{
 Lorenz Gerber, Viet Mai Hoang
 }
-

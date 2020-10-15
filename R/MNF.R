@@ -90,7 +90,6 @@ nnMNF <- function(dataObject, limitSNR = 1.5) {
 ##' @return object of class MNF
 ##' @rdname MNF
 ##' @export
-##' @rdname MNF
 ##' @examples
 ##' testImage<-MassImage('dummy')
 ##' testImage<-MNF(testImage)

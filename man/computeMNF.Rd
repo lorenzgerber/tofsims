@@ -4,8 +4,15 @@
 \alias{computeMNF}
 \title{compute MNF}
 \usage{
-computeMNF(nzData = NULL, noise = NULL, SNR = NULL, ind = NULL,
-  iter = TRUE, limitSNR = NULL, covNoise = NULL)
+computeMNF(
+  nzData = NULL,
+  noise = NULL,
+  SNR = NULL,
+  ind = NULL,
+  iter = TRUE,
+  limitSNR = NULL,
+  covNoise = NULL
+)
 }
 \arguments{
 \item{nzData}{matrix}
@@ -32,4 +39,3 @@ compute MNF, helper for MNF/nnMNF
 This is a helper function for the MNF/nnMNF function and originates
 from the \code{mzImage} package.
 }
-

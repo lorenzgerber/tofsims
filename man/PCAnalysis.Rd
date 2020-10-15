@@ -43,4 +43,3 @@ image(analysis(testImage, 1), comp = 1)}
 \author{
 Lorenz Gerber <lorenz.gerber@slu.se>
 }
-

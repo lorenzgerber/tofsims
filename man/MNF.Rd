@@ -46,4 +46,3 @@ data(tofsimsData)
 MNF(testImage)
 image(analysis(testImage,1), comp = 1)}
 }
-
